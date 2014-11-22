@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="chloe.todolist" >
 
+    <uses-sdk android:minSdkVersion="21" android:targetSdkVersion="21"/>
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
