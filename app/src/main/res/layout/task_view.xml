@@ -3,17 +3,16 @@
     android:layout_width="fill_parent" android:layout_height="fill_parent">
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="@string/text_placeholder"
         android:id="@+id/taskTextView"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
         android:textSize="20dp"
         android:gravity="center_vertical"
         android:layout_toStartOf="@+id/doneButton"
-        android:layout_alignBottom="@+id/doneButton" />
+        android:focusableInTouchMode="false"
+        android:layout_alignParentTop="true"
+        android:textStyle="bold" />
 
     <Button
         android:layout_width="wrap_content"
@@ -21,7 +20,32 @@
         android:text="Done"
         android:id="@+id/doneButton"
         android:longClickable="false"
+        android:onClick="onDoneButtonClick"
         android:layout_alignParentTop="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="false" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Expires:"
+        android:id="@+id/textView2"
+        android:textSize="20dp"
+        android:layout_alignParentStart="false"
+        android:layout_alignParentTop="false"
+        android:layout_below="@+id/taskTextView" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:id="@+id/expiresView"
+        android:layout_toStartOf="@+id/doneButton"
+        android:layout_alignParentStart="false"
+        android:textSize="20dp"
+        android:layout_alignParentTop="false"
+        android:layout_below="@+id/taskTextView"
+        android:layout_toEndOf="@id/textView2"
+        android:layout_marginLeft="4dp" />
+
 </RelativeLayout>
